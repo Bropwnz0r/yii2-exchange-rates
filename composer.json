@@ -1,19 +1,21 @@
 {
-  "name": "yii2avs/exchangerates",
-  "type": "library",
-  "description": "Informers exchange rates",
-  "keywords": ["exchange rates ua","курс валют НБУ","информер курса валют"],
-  "homepage": "https://github.com/Bropwnz0r/yii2-exchange-rates ",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Avseenko Andrey",
-      "email": "bropwnz0r@gmail.com",
-      "homepage": "https://github.com/Bropwnz0r/yii2-exchange-rates",
-      "role": "Developer"
+    "name": "avsdevelop/yii2-exchangerates",
+    "description": "Description",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andrey Andrey",
+            "email": "andreyavseenko94@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "yii2avs\\exchangerates\\": ""
+        }
     }
-  ],
-  "require": {
-    "php": ">=5.3.0"
-  }
 }
