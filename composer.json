@@ -1,5 +1,5 @@
 {
-  "name": "yii2-exchangerates/exchangerates",
+  "name": "yii2avs/exchangerates",
   "type": "library",
   "description": "Informers exchange rates",
   "keywords": ["exchange rates ua","курс валют НБУ","информер курса валют"],
