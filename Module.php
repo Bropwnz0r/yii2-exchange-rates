@@ -1,8 +1,16 @@
 <?php
+namespace yii2avs\exchangerates;
+
+use Yii;
 /**
- * Created by PhpStorm.
- * User: eJay
- * Author: Andrey Avseenko
- * Date: 7/30/16
- * Time: 22:45
+ * Class Module
+ * @package yii2mod\settings
  */
+class Module extends \yii\base\Module
+{
+
+    public function init()
+    {
+        parent::init();
+    }
+}
