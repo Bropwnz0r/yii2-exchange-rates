@@ -9,6 +9,8 @@ use Yii;
 class Module extends \yii\base\Module
 {
 
+    public $controllerNamespace = 'yii2avs\exchangerates\controllers';
+
     public function init()
     {
         parent::init();
