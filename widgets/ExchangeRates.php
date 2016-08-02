@@ -1,7 +1,10 @@
 <?php
 
 namespace yii2avs\exchangerates\widgets;
+
 use yii\base\Widget;
+use yii\data\ArrayDataProvider;
+use yii\grid\GridView;
 use yii\helpers\Html;
 
 
@@ -11,27 +14,42 @@ use yii\helpers\Html;
  * Author: Andrey Avseenko
  * Date: 7/31/16
  * Time: 13:26
- * url https://privat24.privatbank.ua/p24/accountorder?oper=prp&PUREXML&apicour&country=ua&full
  */
 class ExchangeRates extends Widget {
 
     public $saveMode;
 
-    public $message;
+    public $arrayExchange = array();
+
+    //format USDUAH
+    public $currency = array();
 
     public function init(){
         parent::init();
+
         if($this->saveMode){
             // goooo
         }else{
-            
-        }
-        if($this->message === null){
-            $this->message = 'Hello world';
+
+            $url = 'https://query.yahooapis.com/v1/public/yql?q=select+*+from+yahoo.finance.xchange+where+pair+=+%22USDUAH,EURUAH,RUBUAH%22&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys';
+
+            $response = file_get_contents($url);
+
+            $this->arrayExchange = new ArrayDataProvider([
+                'allModels'=> (json_decode($response)->query->results->rate)
+            ]);
         }
     }
 
     public function run(){
-        return Html::encode($this->message);
+        return GridView::widget([
+            'dataProvider'=>$this->arrayExchange,
+            'columns'=> [
+                'Name',
+                'Date',
+                'Ask',
+                'Bid'
+            ]
+        ]);
     }
 }

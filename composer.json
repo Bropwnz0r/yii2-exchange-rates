@@ -2,7 +2,7 @@
     "name": "avsdevelop/yii2-exchangerates",
     "description": "Description",
     "type": "yii2-extension",
-    "keywords": ["yii2","extension"],
+    "keywords": ["yii2","extension","currency","exchange rates","rates"],
     "license": "MIT",
     "authors": [
         {
@@ -11,8 +11,7 @@
         }
     ],
     "require": {
-        "yiisoft/yii2": "*",
-        "linslin/yii2-curl" :"*"
+        "yiisoft/yii2": "*"
     },
     "autoload": {
         "psr-4": {
