@@ -1,6 +1,6 @@
 Yii2 Exchange Rates
 ===================
-Description
+This Yii2 extension for exchange rates for currency.
 
 Installation
 ------------
@@ -28,4 +28,8 @@ Usage
 Once the extension is installed, simply use it in your code by  :
 
 ```php
-<?= \yii2avs\\exchangerates\\AutoloadExample::widget(); ?>```
+<?= \yii2avs\exchangerates\widgets\ExchangeRates::widget() ?>
+```
+
+Demo
+----
