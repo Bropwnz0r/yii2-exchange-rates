@@ -1,6 +1,6 @@
 {
     "name": "avsdevelop/yii2-exchangerates",
-    "description": "Description",
+    "description": "This Yii2 extension for exchange rates for currency.",
     "type": "yii2-extension",
     "keywords": ["yii2","extension","currency","exchange rates","rates"],
     "license": "MIT",
