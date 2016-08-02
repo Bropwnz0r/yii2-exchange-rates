@@ -31,7 +31,9 @@ class ExchangeRates extends Widget {
             // goooo
         }else{
 
-            $url = 'https://query.yahooapis.com/v1/public/yql?q=select+*+from+yahoo.finance.xchange+where+pair+=+%22USDUAH,EURUAH,RUBUAH%22&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys';
+            $stringQueryCurrency = implode(',', $this->currency);
+
+            $url = 'https://query.yahooapis.com/v1/public/yql?q=select+*+from+yahoo.finance.xchange+where+pair+=+%22'.$stringQueryCurrency.'%22&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys';
 
             $response = file_get_contents($url);
 
