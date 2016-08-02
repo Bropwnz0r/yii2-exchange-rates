@@ -28,7 +28,10 @@ Usage
 Once the extension is installed, simply use it in your code by  :
 
 ```php
-<?= \yii2avs\exchangerates\widgets\ExchangeRates::widget() ?>
+<?= \yii2avs\exchangerates\widgets\ExchangeRates::widget(['currency'=>[
+    'USDUAH',
+    'EURUAH',
+]) ?>
 ```
 
 Demo
