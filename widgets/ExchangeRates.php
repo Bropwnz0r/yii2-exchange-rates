@@ -31,7 +31,11 @@ class ExchangeRates extends Widget {
             // goooo
         }else{
 
-            $stringQueryCurrency = implode(',', $this->currency);
+            if($this->currency){
+                $stringQueryCurrency = implode(',', $this->currency);
+            }else{
+                $stringQueryCurrency = 'USDUAH,EURUAH,RUBUAH';
+            }
 
             $url = 'https://query.yahooapis.com/v1/public/yql?q=select+*+from+yahoo.finance.xchange+where+pair+=+%22'.$stringQueryCurrency.'%22&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys';
 
